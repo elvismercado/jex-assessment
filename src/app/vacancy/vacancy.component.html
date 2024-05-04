@@ -1,0 +1,26 @@
+<!-- {{ vacancy | json }} -->
+<div *ngIf="vacancy; else loading">
+  <mat-toolbar>
+    <span>{{ vacancy.position }}</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="">All Vacancies</button>
+  </mat-toolbar>
+  <div class="container">
+    <p>Location: {{ vacancy.location }}</p>
+    <p>Salary: {{ vacancy.salary }}</p>
+    <p>Company: {{ company.name }}</p>
+
+    <p>{{ vacancy.description }}</p>
+    <mat-divider></mat-divider>
+    <div class="content">
+      <b>Details:</b>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
+        commodi expedita deserunt temporibus quibusdam? Sint vel et dolorum
+        vero? Officia voluptatum iure ut modi eum. Necessitatibus magni quas
+        rerum ad.
+      </p>
+    </div>
+  </div>
+</div>
+<ng-template #loading> Vacancy loading... </ng-template>

@@ -1,0 +1,127 @@
+{
+  "companies": [
+    {
+      "id": "1",
+      "name": "ABC Corp"
+    },
+    {
+      "id": "2",
+      "name": "XYZ Ltd"
+    },
+    {
+      "id": "3",
+      "name": "Tech Innovations Inc"
+    },
+    {
+      "id": "4",
+      "name": "Global Solutions Co"
+    },
+    {
+      "id": "5",
+      "name": "Digital Ventures LLC"
+    },
+    {
+      "id": "6",
+      "name": "InnovateTech"
+    },
+    {
+      "id": "7",
+      "name": "CodeCrafters"
+    },
+    {
+      "id": "8",
+      "name": "DataWorks"
+    },
+    {
+      "id": "9",
+      "name": "Web Wizards"
+    },
+    {
+      "id": "10",
+      "name": "SmartSoft"
+    }
+  ],
+  "vacancies": [
+    {
+      "id": "1",
+      "position": "Software Engineer",
+      "location": "Amsterdam",
+      "description": "We are looking for a skilled software engineer to join our team.",
+      "created": "2024-05-01T09:00:00Z",
+      "startdate": "2024-06-01T00:00:00Z",
+      "enddate": "2024-06-30T23:59:59Z",
+      "companyId": "1"
+    },
+    {
+      "id": "2",
+      "position": "Data Scientist",
+      "location": "Rotterdam",
+      "description": "Exciting opportunity for a data scientist with experience in machine learning.",
+      "created": "2024-05-02T10:00:00Z",
+      "startdate": "2024-04-15T00:00:00Z",
+      "enddate": "2024-05-15T23:59:59Z",
+      "companyId": "3"
+    },
+    {
+      "id": "3",
+      "position": "Web Developer",
+      "location": "The Hague",
+      "description": "Join our dynamic team as a web developer and work on cutting-edge projects.",
+      "created": "2024-05-03T11:00:00Z",
+      "startdate": "2024-04-10T00:00:00Z",
+      "enddate": "2024-05-10T23:59:59Z",
+      "companyId": "5"
+    },
+    {
+      "id": "4",
+      "position": "Product Manager",
+      "location": "Utrecht",
+      "description": "Seeking a talented product manager to drive product development and innovation.",
+      "created": "2024-05-04T12:00:00Z",
+      "startdate": "2024-05-01T00:00:00Z",
+      "enddate": "2024-06-30T23:59:59Z",
+      "companyId": "7"
+    },
+    {
+      "id": "5",
+      "position": "UI/UX Designer",
+      "location": "Eindhoven",
+      "description": "Join our design team and create user-friendly interfaces for our products.",
+      "created": "2024-05-05T13:00:00Z",
+      "startdate": "2024-04-15T00:00:00Z",
+      "enddate": "2024-05-14T23:59:59Z",
+      "companyId": "9"
+    },
+    {
+      "id": "11",
+      "position": "Software Engineer",
+      "location": "The Hague",
+      "description": "We are looking for a skilled software engineer to join our team.",
+      "salary": "5000 EUR/month",
+      "companyId": "2",
+      "created": "2024-04-25T12:00:00Z",
+      "startdate": "2024-04-10T00:00:00Z",
+      "enddate": "2024-06-10T00:00:00Z"
+    },
+    {
+      "id": "13",
+      "position": "Data Analyst",
+      "location": "Rotterdam",
+      "description": "Join our team as a data analyst and make an impact.",
+      "companyId": "2",
+      "salary": "4800 EUR/month",
+      "created": "2024-04-27T14:30:00Z"
+    },
+    {
+      "id": "f02e",
+      "companyId": "2",
+      "position": "Frontend Dev",
+      "location": "The Hague",
+      "description": "Call us for more",
+      "salary": "Between €3500 and €4500 per month",
+      "startdate": "",
+      "enddate": "",
+      "created": "2024-05-03T17:04:29.539Z"
+    }
+  ]
+}

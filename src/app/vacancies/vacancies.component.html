@@ -1,0 +1,42 @@
+<mat-toolbar>
+  <span>Vacancies</span>
+  <span class="spacer"></span>
+  <button mat-button (click)="newVacancy()">New Vacancy</button>
+</mat-toolbar>
+<div class="vacancy-container">
+  <div class="filters">
+    <p><b>Filters</b></p>
+    <mat-form-field>
+      <mat-label>Company:</mat-label>
+      <mat-select [(value)]="filteredCompany">
+        <mat-option>All</mat-option>
+        <mat-option *ngFor="let company of companies" [value]="company">{{
+          company.name
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="content">
+    <mat-card class="vacancy" *ngFor="let vacancy of filteredVacancies">
+      <mat-card-content>
+        <h1>{{ vacancy.position }}</h1>
+        <p>{{ vacancy.description }}</p>
+        <p>
+          {{ vacancy.location }} at
+          <i
+            ><small>{{ getCompany(vacancy.companyId) }}</small></i
+          >
+        </p>
+        <p>{{ vacancy.salary }}</p>
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-button (click)="createDeeplink(vacancy)">Deeplink</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card class="vacancy" *ngIf="!filteredVacancies.length">
+      <mat-card-content>
+        <h1>{{ filteredCompany?.name }} has no vacancies at the moment.</h1>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

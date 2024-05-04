@@ -1,0 +1,83 @@
+<mat-dialog-content class="content">
+  <p>Add a new vacancy</p>
+
+  <div [formGroup]="vacancyForm">
+    <mat-form-field>
+      <mat-label>Company:</mat-label>
+      <mat-select formControlName="companyId" required>
+        <mat-option *ngFor="let company of companies" [value]="company.id">{{
+          company.name
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Position</mat-label>
+      <input
+        matInput
+        placeholder="Position"
+        formControlName="position"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Location</mat-label>
+      <input matInput placeholder="Location" formControlName="location" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <input matInput placeholder="Description" formControlName="description" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Salary</mat-label>
+      <input matInput placeholder="Salary" formControlName="salary" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Vacancy start date</mat-label>
+      <input
+        matInput
+        formControlName="startdate"
+        [min]="datePickerMinDate"
+        [matDatepicker]="startdate"
+      />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="startdate"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #startdate></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Vacancy end date</mat-label>
+      <input
+        matInput
+        formControlName="enddate"
+        [min]="vacancyEndDateMinDate || datePickerMinDate"
+        [matDatepicker]="enddate"
+      />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="enddate"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #enddate></mat-datepicker>
+    </mat-form-field>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button
+    mat-button
+    type="submit"
+    [disabled]="!vacancyForm.valid"
+    (click)="submit()"
+  >
+    Submit
+  </button>
+</mat-dialog-actions>

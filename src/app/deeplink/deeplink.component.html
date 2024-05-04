@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Share this vacancy</h2>
+<mat-dialog-content>
+  <p>{{ vacancy.position }} at "{{ vacancy.location }}"</p>
+  <div class="deeplink" (click)="copyDeeplink()">
+    <p>{{ deeplink }}</p>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close [routerLink]="link">Open Link</button>
+  <button mat-button cdkFocusInitial (click)="copyDeeplink()">Copy Link</button>
+</mat-dialog-actions>
